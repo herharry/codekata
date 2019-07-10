@@ -5,7 +5,7 @@ c=['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','
 b=['a','e','i','o','u']
 if(a in b):
   print("Vowel")
-elsif(a in c):
+elif(a in c):
   print("Consonant")
 else:
   print("Invalid")
