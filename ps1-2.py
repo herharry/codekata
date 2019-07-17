@@ -7,10 +7,9 @@ def combine(a):
   return val
 
 
-a=input()
-b=input()
-x=list(map(int,a))
-y=int(b)
+a=input().split()
+x=list(map(int,a[0]))
+y=int(a[1])
 temp=list(x)
 temp.sort()
 j=0
