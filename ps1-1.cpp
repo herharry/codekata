@@ -1,4 +1,8 @@
-int n;
+#include <stdio.h>
+
+int main()
+{
+    int n;
     cin>>n;
     char a[10][100];
     for(int i=0;i<n;i++)
@@ -25,3 +29,4 @@ int n;
         cout<<a[0][i];
 
     return 0;
+}
