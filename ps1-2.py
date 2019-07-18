@@ -1,3 +1,5 @@
+from itertools import combinations
+
 def combine(a):
   val=0
   j=len(a)-1
@@ -6,32 +8,18 @@ def combine(a):
     j=j-1
   return val
 
-
 a=input().split()
 x=list(map(int,a[0]))
 y=int(a[1])
-temp=list(x)
-temp.sort()
-j=0
-l=list()
-newa = list()
-
-if(y==0):
-  print(a)
-else:    
-  for i in range(len(x)):
-    if(x[i]==temp[j]):
-      if(i+len(x)-y<=len(x)):
-        for k in range(i,len(x)-y+i):
-          newa.append(x[k])
-        break;
-      else:
-        j=j+1
-        i=0;
-    if(j>=len(x)):
-      break
-  
-  print(combine(newa))
-
+if(len(x)<y):
+  print("error")
+else:
+  final=list()
+  reml=len(x)-y
+  newl = list(combinations(x,reml))
+  for i in newl:
+    final.append(combine(i))
+  final.sort()
+  print(final[0])
 
 
