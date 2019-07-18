@@ -1,0 +1,21 @@
+a=input().split()
+word1=a[0]
+word2=a[1]
+if(len(word1)<len(word2)):
+  x=len(word1)
+  y=len(word2)
+else:
+  x=len(word2)
+  y=len(word1)
+j=0
+xc=0
+for i in range(x):
+  if(len(word1)<len(word2)):
+    if(word1[i]!=word2[j]):
+      xc=xc+1
+  else:
+    if(word1[j]!=word2[i]):
+      xc=xc+1
+  j=j+1
+xc=xc+y-x
+print(xc)
