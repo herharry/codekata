@@ -1,3 +1,5 @@
 a=int(input())
 b=list(map(int,input().split()))
-print(b.sort())
+b.sort(reverse=True)
+for i in b:
+  print(i)
