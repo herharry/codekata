@@ -9,6 +9,18 @@ def binary(x):
 a=int(input())
 x=list()
 b=list(map(int,input().split()))
+b.sort(reverse=True)
 for i in range(len(b)):
   x.append(binary(b[i]))
-print(x)
+l=list()
+for i in range(len(x)):
+  l.append(x[i].count(1))
+l.sort(reverse=True)
+j=l[0]
+while(True):
+  for i in range(len(x)):
+    if(x[i].count(1)==j):
+      print(b[i])
+  j=j-1
+  if(j==0):
+    break;
